@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CampusStay</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+}
+
+/* HEADER */
+header {
+    background: #2b7cff;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 5px;
+}
+
+/* SEARCH */
+.search-box {
+    padding: 15px;
+    text-align: center;
+}
+
+.search-box input {
+    width: 80%;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+}
+
+/* FILTERS */
+.filters {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.filters button {
+    padding: 8px 12px;
+    border: none;
+    background: #ddd;
+    border-radius: 10px;
+}
+
+/* CARD */
+.container {
+    padding: 10px;
+}
+
+.card {
+    background: white;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 15px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.verified {
+    color: green;
+    font-weight: bold;
+}
+
+button {
+    background: #2b7cff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+/* MODAL */
+.modal {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    background: white;
+    width: 100%;
+    padding: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
+}
+
+.close {
+    float: right;
+    cursor: pointer;
+    font-size: 20px;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <h1>🏠 CampusStay</h1>
+    <p>Safe Housing. Smart Living.</p>
+</header>
+
+<div class="search-box">
+    <input type="text" placeholder="Search location...">
+</div>
+
+<div class="filters">
+    <button>Price</button>
+    <button>Distance</button>
+    <button>Type</button>
+</div>
+
+<div class="container">
+
+    <!-- CARD 1 -->
+    <div class="card">
+        <h3>Self Contain</h3>
+        <p>📍 Boji-Boji (5 mins walk)</p>
+        <p>💰 ₦200,000/year</p>
+        <p class="verified">✅ Verified</p>
+        <p>⭐ 4.5 (12 reviews)</p>
+        <button onclick="openModal()">View Details</button>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="card">
+        <h3>Single Room</h3>
+        <p>📍 School Gate</p>
+        <p>💰 ₦120,000/year</p>
+        <p class="verified">✅ Verified</p>
+        <p>⭐ 4.2 (8 reviews)</p>
+        <button onclick="openModal()">View Details</button>
+    </div>
+
+</div>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+    <span class="close" onclick="closeModal()">✖</span>
+    <h2>Self Contain</h2>
+    <p>📍 Boji-Boji</p>
+    <p>💰 ₦200,000/year</p>
+    <p>Spacious room with water and light available.</p>
+    <p class="verified">Unidel Students ✅</p>
+
+    <a href="tel:+2349153560440">
+    <button>+2349153590440</button>
+</a>
+<a href="https://wa.me/+2349153560440" target="_blank">
+    <button>💬 WhatsApp</button>
+</a>
+</div>
+
+<script>
+function openModal() {
+    document.getElementById("modal").style.display = "block";
+}
+
+function closeModal() {
+    document.getElementById("modal").style.display = "none";
+}
+</script>
+
+</body>
+</html>
